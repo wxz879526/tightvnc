@@ -53,19 +53,19 @@ public:
                                   StringStorage *userName);
   // Puts the current frame buffer dimension and pixel format to
   // the dim and pf function arguments.
-  virtual void getFrameBufferProperties(Dimension *dim, PixelFormat *pf);
-  virtual void getPrimaryDesktopCoords(Rect *rect);
+  virtual void getFrameBufferProperties(Dimension *dim, PixelFormat *pf) override;
+  virtual void getPrimaryDesktopCoords(Rect *rect) override;
   virtual void getDisplayNumberCoords(Rect *rect,
-                                      unsigned char dispNumber);
-  virtual void getNormalizedRect(Rect *rect);
-  virtual void getWindowCoords(HWND hwnd, Rect *rect);
-  virtual HWND getWindowHandleByName(const StringStorage *windowName);
-  virtual void getApplicationRegion(unsigned int procId, Region *region);
-  virtual bool isApplicationInFocus(unsigned int procId);
+                                      unsigned char dispNumber) override;
+  virtual void getNormalizedRect(Rect *rect) override;
+  virtual void getWindowCoords(HWND hwnd, Rect *rect) override;
+  virtual HWND getWindowHandleByName(const StringStorage *windowName) override;
+  virtual void getApplicationRegion(unsigned int procId, Region *region) override;
+  virtual bool isApplicationInFocus(unsigned int procId) override;
 
-  virtual void setKeyboardEvent(UINT32 keySym, bool down);
-  virtual void setMouseEvent(UINT16 x, UINT16 y, UINT8 buttonMask);
-  virtual void setNewClipText(const StringStorage *newClipboard);
+  virtual void setKeyboardEvent(UINT32 keySym, bool down) override;
+  virtual void setMouseEvent(UINT16 x, UINT16 y, UINT8 buttonMask) override;
+  virtual void setNewClipText(const StringStorage *newClipboard) override;
 
 protected:
   // Calling when at least one update has been detected.

@@ -36,6 +36,7 @@ DesktopBaseImpl::DesktopBaseImpl(ClipboardListener *extClipListener,
   m_updateHandler(0),
   m_log(log)
 {
+
 }
 
 DesktopBaseImpl::~DesktopBaseImpl()
